@@ -36,7 +36,6 @@ public class Player : MonoBehaviour
     float yMin;
     float yMax;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetUpMovementBoundaries();
@@ -45,29 +44,11 @@ public class Player : MonoBehaviour
         shootbutton = FindObjectOfType<ShootButton>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         HorizontalJoystick();
         VerticalJoystick();
     }
-
-    //private void Fire()
-    //{
-    //    if (shootbutton.isButtonPressed())
-    //    {
-    //        firingCoroutine = StartCoroutine(KeepFiring());
-    //        Debug.Log("qwerty");
-    //    }
-    //    if(!shootbutton.isButtonPressed())
-    //    {
-    //        Debug.Log("hey");
-    //        if(firingCoroutine != null)
-    //        {
-    //            StopCoroutine(firingCoroutine);
-    //        }
-    //    }
-    //}
 
     IEnumerator KeepFiring()
     {
